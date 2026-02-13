@@ -6,6 +6,7 @@
 - Check Ruby syntax with `ruby -c` for modified files
 - Ensure proper 2-space indentation
 - Make sure that the server can still run by executing `./bin/dev` after changes
+- When testing endpoints which require exchange and/or symbol, use 'us' and 'aapl' as test values
 
 ## Zeitwerk Conventions
 
