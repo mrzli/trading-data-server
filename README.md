@@ -12,7 +12,8 @@ Minimal Sinatra app with a scalable project layout.
 │   └── routes/
 │       ├── example.rb
 │       ├── exchanges.rb
-│       └── meta.rb
+│       ├── meta.rb
+│       └── data.rb
 ├── app.rb
 ├── config.ru
 ├── Gemfile
