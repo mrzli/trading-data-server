@@ -1,3 +1,5 @@
 require_relative "./app"
 
-run Application
+map "/api" do
+  run Application
+end
