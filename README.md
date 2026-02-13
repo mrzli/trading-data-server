@@ -43,7 +43,7 @@ cp .env.example .env
 ## Run
 
 ```bash
-# Start the development server
+# Start the development server (automatically kills any existing process on the port)
 ./bin/dev
 
 # Stop the server

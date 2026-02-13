@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-exec bundle exec rackup -s puma -p "${PORT:-4567}"
+PORT="${PORT:-4567}"
+
+# Kill any existing process on the port
+if command -v lsof > /dev/null 2>&1; then
+  PID=$(lsof -ti :"$PORT" 2>/dev/null || true)
+  if [ -n "$PID" ]; then
+    echo "Killing existing process $PID on port $PORT..."
+    kill "$PID"
+    sleep 1
+  fi
+fi
+
+exec bundle exec rackup -s puma -p "$PORT"
