@@ -2,6 +2,9 @@
   "chat.tools.terminal.autoApprove": {
     "rake test": true,
     "./bin/dev": true,
-    "./bin/kill": true
+    "./bin/kill": true,
+    "lsof": true,
+    "timeout": true,
+    "true": true
   }
 }
