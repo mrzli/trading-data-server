@@ -9,4 +9,5 @@ class Application < Sinatra::Base
 
   register Routes::Example
   register Routes::Exchanges
+  register Routes::Meta
 end
