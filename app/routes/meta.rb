@@ -3,7 +3,7 @@
 module Routes
   module Meta
     def self.registered(app)
-      app.get "/meta/:exchange/:symbol/dividends" do
+      app.get "/dividends/:exchange/:symbol" do
         content_type :json
         exchange = params[:exchange]
         symbol = params[:symbol]
@@ -17,7 +17,7 @@ module Routes
         File.read(file_path)
       end
 
-      app.get "/meta/:exchange/:symbol/splits" do
+      app.get "/splits/:exchange/:symbol" do
         content_type :json
         exchange = params[:exchange]
         symbol = params[:symbol]
