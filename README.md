@@ -56,10 +56,10 @@ All routes are prefixed with `/api`.
 
 ```bash
 # Hello message
-curl http://localhost:4567/api/
+curl http://localhost:4567/api/example/hello
 
 # Display environment variable
-curl http://localhost:4567/api/env
+curl http://localhost:4567/api/example/env
 ```
 
 ### Exchanges
