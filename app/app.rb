@@ -7,5 +7,5 @@ class App < Sinatra::Base
     set :show_exceptions, false if settings.environment == :production
   end
 
-  register RootRoutes
+  register Root
 end

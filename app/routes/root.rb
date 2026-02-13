@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RootRoutes
+module Root
   def self.registered(app)
     app.get "/" do
       "Hello from Sinatra!"

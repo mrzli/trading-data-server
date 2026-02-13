@@ -9,9 +9,9 @@ Minimal Sinatra app with a scalable project layout.
 ├── app/
 │   ├── app.rb
 │   ├── config/
-│   │   └── environment.rb
+│   │   └── config.rb
 │   └── routes/
-│       └── root_routes.rb
+│       └── root.rb
 ├── config/
 │   └── boot.rb
 ├── app.rb
@@ -22,8 +22,8 @@ Minimal Sinatra app with a scalable project layout.
 
 - `config/boot.rb`: central boot file (bundler + Zeitwerk loader)
 - `app/app.rb`: main Sinatra application class
-- `app/config/environment.rb`: app environment configuration (autoloaded by Zeitwerk)
-- `app/routes/*`: modular route registration
+- `app/config/config.rb`: environment configuration module (collapsed namespace)
+- `app/routes/*`: modular route registration (collapsed namespace)
 - `app.rb`: canonical app entrypoint (loads boot and exposes `App`)
 - `config.ru`: Rack server entrypoint (`run App`)
 
@@ -37,8 +37,7 @@ cp .env.example .env
 
 ## Environment variables
 
-- `EODHD_ROOT`: Base URL for the EODHD API.
-- Default: `https://eodhd.com/api` (used when unset).
+- `EODHD_DIR`: Directory path for EODHD data (required).
 
 ## Run
 
