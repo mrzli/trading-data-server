@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PORT="${PORT:-4567}"
+
+# Find and kill process using the port
+# lsof works on both Linux and macOS
+if command -v lsof > /dev/null 2>&1; then
+  PID=$(lsof -ti :"$PORT" 2>/dev/null || true)
+  if [ -n "$PID" ]; then
+    echo "Killing process $PID on port $PORT..."
+    kill "$PID"
+    echo "Process killed."
+  else
+    echo "No process found on port $PORT."
+  fi
+else
+  echo "Error: lsof command not found. Cannot kill process."
+  exit 1
+fi

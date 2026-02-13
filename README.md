@@ -43,7 +43,11 @@ cp .env.example .env
 ## Run
 
 ```bash
+# Start the development server
 ./bin/dev
+
+# Stop the server
+./bin/kill
 ```
 
 Server runs on http://localhost:4567
