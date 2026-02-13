@@ -2,10 +2,10 @@
 
 require "sinatra/base"
 
-class App < Sinatra::Base
+class Application < Sinatra::Base
   configure do
     set :show_exceptions, false if settings.environment == :production
   end
 
-  register Root
+  register Routes::Root
 end
