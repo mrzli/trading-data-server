@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+exec bundle exec rackup -s puma -p "${PORT:-4567}"

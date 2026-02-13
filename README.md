@@ -21,7 +21,8 @@ Minimal Sinatra app with a scalable project layout.
 - `config/boot.rb`: central boot file (bundler + Zeitwerk loader)
 - `app/app.rb`: main Sinatra application class
 - `app/routes/*`: modular route registration
-- `app.rb`: compatibility entrypoint
+- `app.rb`: canonical app entrypoint (loads boot and exposes `App`)
+- `config.ru`: Rack server entrypoint (`run App`)
 
 ## Setup
 
@@ -33,7 +34,7 @@ bundle install
 ## Run
 
 ```bash
-bundle exec rackup -s puma -p 4567
+./bin/dev
 ```
 
 Open http://localhost:4567
