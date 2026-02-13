@@ -8,6 +8,8 @@ Minimal Sinatra app with a scalable project layout.
 .
 ├── app/
 │   ├── app.rb
+│   ├── config/
+│   │   └── environment.rb
 │   └── routes/
 │       └── root_routes.rb
 ├── config/
@@ -20,6 +22,7 @@ Minimal Sinatra app with a scalable project layout.
 
 - `config/boot.rb`: central boot file (bundler + Zeitwerk loader)
 - `app/app.rb`: main Sinatra application class
+- `app/config/environment.rb`: app environment configuration (autoloaded by Zeitwerk)
 - `app/routes/*`: modular route registration
 - `app.rb`: canonical app entrypoint (loads boot and exposes `App`)
 - `config.ru`: Rack server entrypoint (`run App`)
