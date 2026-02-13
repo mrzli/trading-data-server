@@ -3,4 +3,9 @@
 require "bundler/setup"
 Bundler.require(:default)
 
-require_relative "../app/application"
+loader = Zeitwerk::Loader.new
+loader.push_dir(File.expand_path("../app", __dir__))
+loader.collapse(File.expand_path("../app/routes", __dir__))
+loader.setup
+
+APP_LOADER = loader

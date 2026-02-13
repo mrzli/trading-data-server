@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "sinatra/base"
-require_relative "routes/root_routes"
 
 class App < Sinatra::Base
   configure do
