@@ -29,7 +29,13 @@ Minimal Sinatra app with a scalable project layout.
 ```bash
 mise install
 bundle install
+cp .env.example .env
 ```
+
+## Environment variables
+
+- `EODHD_ROOT`: Base URL for the EODHD API.
+- Default: `https://eodhd.com/api` (used when unset).
 
 ## Run
 

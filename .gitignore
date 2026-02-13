@@ -2,3 +2,4 @@
 .ruby-lsp/
 log/
 tmp/
+.env
