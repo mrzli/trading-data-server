@@ -10,7 +10,8 @@ Minimal Sinatra app with a scalable project layout.
 │   ├── application.rb
 │   ├── config.rb
 │   └── routes/
-│       └── root.rb
+│       ├── example.rb
+│       └── exchanges.rb
 ├── app.rb
 ├── config.ru
 ├── Gemfile

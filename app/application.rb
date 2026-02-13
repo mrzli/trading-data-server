@@ -7,5 +7,6 @@ class Application < Sinatra::Base
     set :show_exceptions, false if settings.environment == :production
   end
 
-  register Routes::Root
+  register Routes::Example
+  register Routes::Exchanges
 end
