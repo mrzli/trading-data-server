@@ -3,12 +3,14 @@
 module Routes
   module Example
     def self.registered(app)
-      app.get "/example/hello" do
-        "Hello from Sinatra!"
-      end
+      app.namespace "/example" do
+        get "/hello" do
+          "Hello from Sinatra!"
+        end
 
-      app.get "/example/env" do
-        "EODHD_DIR: #{Config.eodhd_dir}"
+        get "/env" do
+          "EODHD_DIR: #{Config.eodhd_dir}"
+        end
       end
     end
   end
