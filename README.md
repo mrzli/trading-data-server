@@ -46,4 +46,45 @@ cp .env.example .env
 ./bin/dev
 ```
 
-Open http://localhost:4567
+Server runs on http://localhost:4567
+
+## API Routes
+
+All routes are prefixed with `/api`.
+
+### Example Routes
+
+```bash
+# Hello message
+curl http://localhost:4567/api/
+
+# Display environment variable
+curl http://localhost:4567/api/env
+```
+
+### Exchanges
+
+```bash
+# List all exchanges
+curl http://localhost:4567/api/exchanges
+```
+
+### Meta Data
+
+```bash
+# Get dividends for a symbol
+curl http://localhost:4567/api/dividends/us/aapl
+
+# Get splits for a symbol
+curl http://localhost:4567/api/splits/us/aapl
+```
+
+### Market Data
+
+```bash
+# Get end-of-day data (CSV)
+curl http://localhost:4567/api/data/day/us/aapl
+
+# Get intraday data for date range (JSON with CSV values)
+curl "http://localhost:4567/api/data/intra/us/aapl?from=2020-01&to=2020-02"
+```
