@@ -71,6 +71,9 @@ curl http://localhost:4567/api/example/env
 ```bash
 # List all exchanges
 curl http://localhost:4567/api/symbols/exchanges
+
+# List metadata for symbols
+curl http://localhost:4567/api/symbols/meta
 ```
 
 ### Info
