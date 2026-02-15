@@ -12,5 +12,6 @@ class Application < Sinatra::Base
 
   register Routes::Example
   register Routes::Symbols
+  register Routes::Info
   register Routes::Data
 end
