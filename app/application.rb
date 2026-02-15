@@ -11,7 +11,6 @@ class Application < Sinatra::Base
   end
 
   register Routes::Example
-  register Routes::Exchanges
-  register Routes::Meta
+  register Routes::Symbols
   register Routes::Data
 end

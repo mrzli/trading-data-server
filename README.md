@@ -11,8 +11,7 @@ Minimal Sinatra app with a scalable project layout.
 │   ├── config.rb
 │   └── routes/
 │       ├── example.rb
-│       ├── exchanges.rb
-│       ├── meta.rb
+│       ├── symbols.rb
 │       └── data.rb
 ├── app.rb
 ├── config.ru
@@ -66,21 +65,17 @@ curl http://localhost:4567/api/example/hello
 curl http://localhost:4567/api/example/env
 ```
 
-### Exchanges
+### Symbols
 
 ```bash
 # List all exchanges
-curl http://localhost:4567/api/exchanges
-```
+curl http://localhost:4567/api/symbols/exchanges
 
-### Meta Data
-
-```bash
 # Get dividends for a symbol
-curl http://localhost:4567/api/dividends/us/aapl
+curl http://localhost:4567/api/symbols/dividends/us/aapl
 
 # Get splits for a symbol
-curl http://localhost:4567/api/splits/us/aapl
+curl http://localhost:4567/api/symbols/splits/us/aapl
 ```
 
 ### Market Data
